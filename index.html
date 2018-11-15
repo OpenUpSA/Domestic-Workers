@@ -7,7 +7,7 @@
   <title>Living Wage | Code for South Africa </title>
 
   <!-- Bootstrap -->
-  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-select.min.css" rel="stylesheet">
   <link href="css/bootstrap-slider.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -76,20 +76,52 @@
 
         <form id="input-form" role="form">
           <div class="form-group">
-            <label class="control-label lead question" for="pay-amount">How much do you pay your household worker?</label><br>
+            <label class="control-label lead question" for="pay-amount-day">How much do you pay your household worker?</label><br>
             <div class="row">
               <div class="col-sm-9">
-                <input
-                    id="pay-amount"
-                    class="slider"
-                    style="width: 100%;"
-                    type="text"
-                    name="pay-amount"
-                    data-slider-min="50"
-                    data-slider-max="8000"
-                    data-slider-step="10"
-                    value="500"
-                    data-slider-value="500"/>
+                  <input
+                  id="pay-amount"
+                  type="text"
+                   style="display: none;">
+                <div id="outer-pay-amount-day">
+                  <input
+                      id="pay-amount-day"
+                      class="slider"
+                      style="width: 100%;"
+                      type="text"
+                      name="pay-amount"
+                      data-slider-min="50"
+                      data-slider-max="600"
+                      data-slider-step="10"
+                      value="100"
+                      data-slider-value="100"/>
+                </div>
+                <div id="outer-pay-amount-week">
+                  <input
+                      id="pay-amount-week"
+                      class="slider"
+                      style="width: 100%;"
+                      type="text"
+                      name="pay-amount-week"
+                      data-slider-min="200"
+                      data-slider-max="3000"
+                      data-slider-step="50"
+                      value="500"
+                      data-slider-value="500"/>
+                </div>
+                <div id="outer-pay-amount-month">
+                  <input
+                      id="pay-amount-month"
+                      class="slider"
+                      style="width: 100%;"
+                      type="text"
+                      name="pay-amount-month"
+                      data-slider-min="1000"
+                      data-slider-max="13000"
+                      data-slider-step="50"
+                      value="2000"
+                      data-slider-value="2000"/>
+                </div>
               </div>
               <div class="col-sm-3">
                 <select class="selectpicker" name="pay-rate" data-width="100%" id="pay-rate">
@@ -370,7 +402,7 @@
               </p>
               <p class="note">
                 Transportation is not cheap in Cape Town (public or private) and this is likely true through South Africa.
-                Of course if the tariff or the number of trips from poorer areas to urban employer centres were lower
+                Of course, if the tariff or the number of trips from poorer areas to urban employer centres were lower
                 then the cost would be lower. But it can also be higher depending on the distance.
               </p>
 
@@ -519,7 +551,7 @@
 
 										<div class="form-group">
 			                <label for="education-cost" class="lead question">What much do you estimate your domestic worker spends on <strong>sending kids to school</strong>?</label>
-			                <p>Estimate the cost per school aged child: </p>
+			                <p>Estimate the cost per school-aged child: </p>
 			                <input
 			                    id="education-cost"
 			                    class="slider"
@@ -606,7 +638,7 @@
 							    <div class="col-sm-9">
 
 										<div class="form-group">
-			                <label for="communication-cost" class="lead question">What do you estimate each member of your domestic worker's household spends on <strong>communcation</strong>?</label><br>
+			                <label for="communication-cost" class="lead question">What do you estimate each member of your domestic worker's household spends on <strong>communication</strong>?</label><br>
 			                <p>Estimate the monthly cost per person in the household:</p>
 			                <input
 			                    id="communication-cost"
@@ -744,7 +776,7 @@
               	These include clothing, household items, personal care, and emergency expenses. Estimate other costs incurred per person in the household.
               </p>
               <p class="note">
-                This should including for emergencies and procurement of durable goods, transportation of goods (gas cylinders, groceries, etc), implicit and explicit costs of running a household.
+                This should include for emergencies and procurement of durable goods, transportation of goods (gas cylinders, groceries, etc), implicit and explicit costs of running a household.
               </p>
 
           </div>
@@ -785,7 +817,7 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
 <script src="js/bootstrap-slider.js"></script>
 <script src="js/main.js"></script>
