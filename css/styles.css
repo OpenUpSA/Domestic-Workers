@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900);
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
 
 body{
     background: #ccc url('../images/furley_bg.png');
@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6{
 #panel-food-expenses{background: hsla(75,60%,40%,1);}
 #panel-transport-expenses{background: hsla(100,60%,40%,1);}
 #panel-rent-expenses{background: hsla(125,60%,40%,1);}
-#panel-utilities-expenses{background: hsla(909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090,60%,40%,1);}
+#panel-utilities-expenses{background: hsla(90,60%,40%,1);}
 #panel-health-expenses{background: hsla(150,60%,40%,1);}
 #panel-hygiene-expenses{background: hsla(100,40%,55%,1);}
 #panel-education-expenses{background: hsla(175,60%,40%,1);}
