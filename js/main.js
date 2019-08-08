@@ -45,22 +45,28 @@ function calculate_food(household_size) {
 
 function calculate_rent(household_size) {
     var rent_cost = $("#rent-cost").val();
-    var sanitation_comment = ""
-    var violence_comment = ""
     var out = Math.round(rent_cost)
 
-    //Need comments on sanitation and violence to update with rent options.
-    if (rent_cost > 0 && rent_cost < constants.sanitation_threshold)
-        sanitation_comment = "Low functionality of bathrooms. High likelihood of communal bathroom. Low likelihood of reliable trash collection."
-    else
-        sanitation_comment = "Personal bathroom facilities. Reliable trash collection"
-
-    if (rent_cost > 0 && rent_cost < constants.violence_threshold)
-        violence_comment = "High likelihood of experiencing gang violence and burglaries."
-    else
-        violence_comment = "Much lower likelihood of experiencing violence."
 
     $("#rent-total").html(to_rands(out));
+
+    return out
+}
+
+function calculate_utilities(household_size) {
+    var utilities_cost = $("#utilities-cost").val();
+    var out = Math.round(utilities_cost)
+
+    $("#utilities-total").html(to_rands(out));
+
+    return out
+}
+
+function calculate_hygiene(household_size) {
+    var hygiene_cost = $("#hygiene-cost").val();
+    var out = Math.round(hygiene_cost)
+
+    $("#hygiene-total").html(to_rands(out));
 
     return out
 }
@@ -116,6 +122,8 @@ function calculate_expenditure(household_size) {
     var total = 0;
 
     total += calculate_rent(household_size);
+    total += calculate_utilities(household_size);
+    total += calculate_hygiene(household_size);
     total += calculate_food(household_size);
     total += calculate_transport(household_size);
     total += calculate_education(household_size);

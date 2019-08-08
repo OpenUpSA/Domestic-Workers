@@ -148,6 +148,10 @@ h1, h2, h3, h4, h5, h6{
 
 }
 
+.panel .note a {
+    color: #000;
+}
+
 .sources{
     font-family: 'Roboto Slab';
     font-weight: 400;
@@ -317,7 +321,9 @@ h1, h2, h3, h4, h5, h6{
 #panel-food-expenses{background: hsla(75,60%,40%,1);}
 #panel-transport-expenses{background: hsla(100,60%,40%,1);}
 #panel-rent-expenses{background: hsla(125,60%,40%,1);}
+#panel-utilities-expenses{background: hsla(909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090909090,60%,40%,1);}
 #panel-health-expenses{background: hsla(150,60%,40%,1);}
+#panel-hygiene-expenses{background: hsla(100,40%,55%,1);}
 #panel-education-expenses{background: hsla(175,60%,40%,1);}
 #panel-communication-expenses{background:hsla(200,60%,40%,1);}
 #panel-recreation-expenses{background: hsla(225,60%,40%,1);}
