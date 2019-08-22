@@ -185,20 +185,33 @@ function updatePercentage(monthly_cost) {
     if (!monthly_cost) return;
 
     var monthly_income = default_day_rate;
-    var period_income = parseInt($("#Budget").val());
+    //var period_income = parseInt($("#Budget").val());
     var payment_period = $("#Payment-Period").val()
 
-    var period_income = isNaN(period_income) ? default_day_rate : period_income;
+    //var period_rate = isNaN(period_income) ? default_day_rate : period_income;
 
     if (payment_period == "day") {
-        monthly_income =  period_income * days_per_month;
+        var period_rate = $("#wage-slider-daily").data().from;
+        monthly_income =  period_rate * days_per_month;
+
+        $("#wage-slider-monthly").css("display", "none !important")
+        $("#wage-slider-daily").css("display", "block !important")
     } else {
-        monthly_income = period_income;
+        var period_rate = $("#wage-slider-monthly").data().from;
+        monthly_income = period_rate;
+
+        $("#wage-slider-monthly").css("display", "block !important")
+        $("#wage-slider-daily").css("display", "none !important")
     }   
 
     var perc = monthly_income / monthly_cost;
 
     $(".percentage-covered").text(fmt_perc(perc));
+    if (perc >= 1) {
+        $(".percentage-covered").addClass("green");
+    } else {
+        $(".percentage-covered").removeClass("green");
+    }
     $(".expense-total").text(fmt_money(monthly_cost));
 }
 
@@ -246,27 +259,3 @@ $("#Budget").change(function(e) {
 $(function() {
     setupSliders();
 });
-/*
-$("#household-size").ionRangeSlider({
-});
-$("#food-cost").ionRangeSlider({
-});
-$("#transport-cost").ionRangeSlider({
-});
-$("#housing-cost").ionRangeSlider({
-});
-$("#utilities-cost").ionRangeSlider({
-});
-$("#healthcare-cost").ionRangeSlider({
-});
-$("#hygiene-cost").ionRangeSlider({
-});
-$("#education-cost").ionRangeSlider({
-});
-$("#communication-cost").ionRangeSlider({
-});
-$("#recreation-cost").ionRangeSlider({
-});
-$("#other-cost").ionRangeSlider({
-});
-*/
