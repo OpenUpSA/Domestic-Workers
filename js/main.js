@@ -222,31 +222,11 @@ function update_output() {
 
         $("#output-percentage").html(output_percentage + "%")
         $("#output-statement").html(output_statement);
-        change_twitter_text("I pay my domestic worker R" + monthly_pay + " which is " + output_percentage + "% of their monthly need, how much do you pay?");
         return true
     }
     return false
 }
 
-function change_twitter_text(txt) {
-    if (typeof(twttr) != "undefined") {
-        // Remove existing iframe
-        $('#tweetBtn iframe').remove();
-        // Generate new markup
-        var tweetBtn = $('<a></a>')
-            .addClass('twitter-share-button')
-            .attr('href', 'http://twitter.com/share')
-            .attr('data-url', 'http://bit.ly/1Gn9ZWS')
-            .attr('data-via', 'code4sa')
-            .attr('data-text', txt)
-            .attr('data-count', 'horizontal')
-            .attr('data-hashtags', 'livingwage');
-        $('#tweetBtn').append(tweetBtn);
-        console.log(twttr)
-        console.log(txt)
-        twttr.widgets.load();
-    }
-}
 
 function applySliderConfig(config) {
     $.each(config, function(id, cfg) {
@@ -340,19 +320,7 @@ $(document).ready(function() {
     });
 
     // update on click
-    var twitter_bound = false;
     $("#go-button").on('click', function(e) {
-        // attach twitter widget events
-        if (!twitter_bound && typeof(twttr) != "undefined") {
-            twttr.events.bind('click', function(e) {
-                ga('send', 'event', 'twitter', 'click');
-            });
-            twttr.events.bind('tweet', function(e) {
-                ga('send', 'event', 'twitter', 'tweet');
-            });
-            twitter_bound = true;
-        }
-
         e.preventDefault();
         if (update_output())
         {
