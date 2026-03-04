@@ -29,7 +29,7 @@
       "value": 31,
       "formater": "rand",
       "notes": [
-        "According to the Jan 2026 Household Affordability Index, the cost of feeding a family of four a basic nutritious diet per month is R3,702.25; it costs a family of five R4,702.54; and a family of seven, R6,502.10."
+        "According to the Jan 2026 Household Affordability Index, the cost of feeding a family of four a basic nutritious diet per month is R3,702; it costs a family of five R4,702; and a family of seven, R6,502."
       ],
       "source": "Jan 2026 Household Affordability Index"
     },
@@ -58,23 +58,23 @@
     },
     "utilities-cost": {
       "min": 0,
-      "max": 1500,
+      "max": 2500,
       "step": 50,
-      "value": 600,
+      "value": 1100,
       "formater": "rand",
       "notes": [
-        "According to the May 2019 Household Affordability Index, it costs a household of four R529 for 350 kWh of prepaid electricity and R120 for water (a flat rate for unmetered households)."
+        "According to the May 2019 Household Affordability Index, it costs a household of four R529 for 350 kWh of prepaid electricity and R453 for water (a flat rate for unmetered households)."
       ],
-      "source": "May 2019 Household Affordability Index"
+      "source": "Jan 2026 Household Affordability Index and Poweroptimal"
     },
     "health-cost": {
       "min": 0,
-      "max": 300,
+      "max": 500,
       "step": 10,
-      "value": 40,
+      "value": 100,
       "formater": "rand",
       "notes": [
-        "Setting up a health budget for a family is very important. In South Africa, according to StatsSA, as many as 45 million South Africans <a href=\"http://www.statssa.gov.za/?p=10548\">fall outside the medical aid net</a> and are largely dependent on public healthcare. Public consultancies cost R39 per visit. Healthcare costs could also be covered through health insurance which can cost <a href=\"http://www.southafrica.info/services/health/healthfaq.htm\">at least R299 per month per person.</a>"
+        "Setting up a health budget for a family is very important. In South Africa, according to StatsSA, as many as 45 million South Africans <a href=\"http://www.statssa.gov.za/?p=10548\">fall outside the medical aid net</a> and are largely dependent on public healthcare. Public consultancies cost R95 per visit. Healthcare costs could also be covered through health insurance which can cost <a href=\"http://www.southafrica.info/services/health/healthfaq.htm\">at least R299 per month per person.</a>"
       ],
       "source": "<a href=\"http://www.southafrica.info/services/health/healthfaq.htm\" target=\"_blank\">southafrica.info – Health FAQ</a><br><a href=\"http://www.medicalaid.co.za/MedicalAid/MedicalAidfortheLowIncomeEarner.aspx\" target=\"_blank\">medicalaid.co.za – Medical Aid for Low Income Earners</a>"
     },
@@ -82,10 +82,10 @@
       "min": 0,
       "max": 2000,
       "step": 50,
-      "value": 1022,
+      "value": 1000,
       "formater": "rand",
       "notes": [
-        "Domestic and personal hygiene products are essential for safe food preparation and overall household health. These include products such as washing powder, dishwashing liquid, all-purpose cleaner, green bar soap, household bleach, toilet paper, toothpaste, body lotion and sanitary pads. According to the July 2025 Household Affordability Index, these products cost a family of four R1,022.56 per month."
+        "Domestic and personal hygiene products are essential for safe food preparation and overall household health. These include products such as washing powder, dishwashing liquid, all-purpose cleaner, green bar soap, household bleach, toilet paper, toothpaste, body lotion and sanitary pads. According to the July 2025 Household Affordability Index, these products cost a family of four R1,022 per month."
       ],
       "source": "July 2025  Household Affordability Index"
     },
